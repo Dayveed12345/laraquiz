@@ -20,6 +20,8 @@ class CreateQuizzesTable extends Migration
             $table->longText('optionB');
             $table->longText('optionC')->nullable();
             $table->longText('optionD')->nullable();
+            $table->longText('catergory');
+            $table->string('difficulty');
             $table->timestamps();
         });
     }

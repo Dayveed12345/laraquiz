@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin/quiz/reload',[quizController::class, 'index']);
-Route::get('/quiz',[quizController::class,'display']);
+Route::get('/quiz/{category}/{difficulty}',[quizController::class,'display']);
 
