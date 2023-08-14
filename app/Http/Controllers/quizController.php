@@ -21,6 +21,8 @@ class quizController extends Controller
             $quizdb->optionB=$quiz->answers->answer_b;
             $quizdb->optionC=$quiz->answers->answer_c;
             $quizdb->optionD=$quiz->answers->answer_d;
+            $quizdb->category=$quiz->category;
+            $quizdb->difficulty=$quiz->difficulty;
             $quizdb->save();
         }
       // return view('index', ['question' => $quiz]);
@@ -31,5 +33,5 @@ class quizController extends Controller
          return view('index', ['question' => $quiz]);
         // dd($quiz);
     }
-    
+
 }
